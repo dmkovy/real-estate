@@ -194,68 +194,172 @@
 				<!-- //! Card -->
 
 				<!-- Button -->
-					<buttton class="btn-more">
-						<img src="./img/icons/plus-circle.svg" alt="Button show more">
-						Показать еще
-					</buttton>
+				<button class="btn-more">
+					<img src="./img/icons/plus-circle.svg" alt="Button show more">
+					Показать еще
+				</button>
 				<!-- //! Button -->
 
 			</main>
 			<aside class="sidebar">
 
-				<!-- Widget -->
-				<div class="widget">
-					<div class="widget__title">
-						Близость к метро
-					</div>
-					<div class="widget__body">
-
-						<!--Location -->
-						<div class="location">
-							<div class="location__row">
-								<button class="location__btn location__btn--active">&lt; 10</button>
-								<button class="location__btn">10-20</button>
-								<button class="location__btn">20-30</button>
-								<button class="location__btn">30+</button>
-							</div>
-							<div class="location__row">
-								<button class="location__btn">Любая</button>
-							</div>
+				<form>
+					<!-- Widget -->
+					<div class="widget">
+						<div class="widget__title">
+							Близость к метро
 						</div>
-						<!-- !/Location -->
+						<div class="widget__body">
 
-					</div>
-				</div>
-				<!-- !/Widget -->
-
-				<!-- Widget -->
-				<div class="widget">
-					<div class="widget__title">
-						Срок сдачи
-					</div>
-					<div class="widget__body">
-
-						<!--Deadline -->
-						<div class="location">
-							<div class="location__row">
-								<button class="location__btn location__btn--active">&lt; 10</button>
-								<button class="location__btn">10-20</button>
-								<button class="location__btn">20-30</button>
-								<button class="location__btn">30+</button>
+							<!--Location -->
+							<div class="location">
+								<div class="location__row">
+									<button class="location__btn">&lt; 10</button>
+									<button class="location__btn">10-20</button>
+									<button class="location__btn">20-30</button>
+									<button class="location__btn">30+</button>
+								</div>
+								<div class="location__row">
+									<button class="location__btn">Любая</button>
+								</div>
 							</div>
-							<div class="location__row">
-								<button class="location__btn">Любая</button>
-							</div>
+							<!-- !/Location -->
+
 						</div>
-						<!-- !/Deadline -->
-
 					</div>
-				</div>
-				<!-- !/Widget -->
+					<!-- !/Widget -->
 
+					<!-- Widget -->
+					<div class="widget">
+						<div class="widget__title">
+							Срок сдачи
+						</div>
+						<div class="widget__body">
+
+							<!--Deadline -->
+							<label class="radio">
+								<input type="radio" class="radio__real" name="term">
+								<span class="radio__fake"></span>
+								<span class="radio__title">Любой</span>
+							</label>
+							<label class="radio">
+								<input type="radio" class="radio__real" name="term">
+								<span class="radio__fake"></span>
+								<span class="radio__title">Сдан</span>
+							</label>
+							<label class="radio">
+								<input type="radio" class="radio__real" name="term">
+								<span class="radio__fake"></span>
+								<span class="radio__title">В этом году</span>
+							</label>
+							<label class="radio">
+								<input type="radio" class="radio__real" name="term">
+								<span class="radio__fake"></span>
+								<span class="radio__title">В следующем году</span>
+							</label>
+
+							<!-- !/Deadline -->
+
+						</div>
+					</div>
+					<!-- !/Widget -->
+
+					<!-- Widget -->
+					<div class="widget">
+						<div class="widget__title">
+							Дополнительные опции
+						</div>
+						<div class="widget__body">
+
+							<!--Additional options -->
+							<label class="checkbox">
+								<input type="checkbox" class="checkbox__real" name="notauto">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Двор без машин</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" class="checkbox__real" name="highceil">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Высокие потолки</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" class="checkbox__real" name="panwind">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Панорамные окна</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" class="checkbox__real" name="pantry">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Есть кладовые</span>
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" class="checkbox__real" name="lowrise">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Малоэтажный</span>
+							</label>
+
+							<!-- Hidden -->
+
+							<label class="checkbox widget__hidden">
+								<input type="checkbox" class="checkbox__real" name="value-05">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Дополнительная опция 1</span>
+							</label>
+							<label class="checkbox widget__hidden">
+								<input type="checkbox" class="checkbox__real" name="value-06">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Дополнительная опция 2</span>
+							</label>
+							<label class="checkbox widget__hidden">
+								<input type="checkbox" class="checkbox__real" name="value-07">
+								<span class="checkbox__fake"></span>
+								<span class="checkbox__title">Дополнительная опция 3</span>
+							</label>
+
+							<!-- !/Hidden -->
+
+							<!-- !/Additional options -->
+							<!-- Показать еще/ Скрыть -->
+							<button class="widget__show-more">Показать еще</button>
+						</div>
+					</div>
+					<!-- !/Widget -->
+
+					<!-- Widget -->
+					<div class="widget">
+						<div class="widget__body">
+
+							<!--Services 0% -->
+							<label class="toggle">
+								<input type="checkbox" class="toggle__real" name="services">
+								<span class="toggle__fake"></span>
+								<span class="toggle__title">Услуги 0%</span>
+							</label>
+							<!--!/Services 0% -->
+
+						</div>
+					</div>
+					<!-- !/Widget -->
+
+					<!-- Widget -->
+					<div class="widget">
+						<div class="widget__body">
+
+							<button class="form-btn form-btn--submit">Применить фильтры</button>
+							<button class="form-btn">
+								<img src="./img/icons/x.svg" alt="Reset filter">
+								Сбросить фильтры</button>
+
+						</div>
+					</div>
+					<!-- !/Widget -->
+
+				</form>
 			</aside>
 		</div>
 	</div>
+
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
