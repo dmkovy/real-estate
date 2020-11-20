@@ -1,9 +1,9 @@
 'use strict';
 
-const locationBtns = document.querySelectorAll('.location__btn');
-const showMoreBtn = document.querySelector('.widget__show-more');
-const widgetHidden = document.querySelectorAll('.widget__hidden');
-const valueHidden = document.querySelector('[name = "value-05"]');
+const locationBtns = document.querySelectorAll('.location__btn'),
+	showMoreBtn = document.querySelector('.widget__show-more'),
+	widgetHidden = document.querySelectorAll('.widget__hidden'),
+	valueHidden = document.querySelector('[name = "value-05"]');
 
 
 locationBtns.forEach(btn => {
@@ -25,4 +25,3 @@ showMoreBtn.addEventListener('click', (event) => {
 		}
 	});
 });
-
