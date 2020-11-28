@@ -27,18 +27,39 @@ cardShowMoreBtn.addEventListener('click', (event) => {
 
 //* Скрытие виджетов в боковом меню по нажатию на Тайтл или стрелку
 
-widgetTitles
+widgetTitles.forEach(widget => {
+	widget.addEventListener('click', () => {
+		widget.classList.toggle('widget__title--active');
+		widget.nextElementSibling.classList.toggle('widget__body--hidden');
+	});
+});
 
 
 //* Фильтр в боковом меню "Близость к метро"
 
-locationBtns.forEach(btn => {
+const anyBtn = document.querySelector('#any');
+
+// function anyLocation() {
+// 	if (anyBtn.classList.contains('location__btn--active')) {
+// 		document.querySelectorAll('#loc_num').forEach(btn => {
+// 			btn.classList.remove('location__btn--active');
+// 		});
+// 	}
+// }
+
+locationBtns.forEach((btn, index) => {
 	btn.addEventListener('click', (event) => {
 		event.preventDefault();
-		btn.classList.toggle('location__btn');
 		btn.classList.toggle('location__btn--active');
+		console.log(index);
+		if (anyBtn.classList.contains('location__btn--active')) {
+			document.querySelectorAll('#loc_num').forEach(btn => {
+				btn.classList.remove('location__btn--active');
+			});
+		}
 	});
 });
+
 
 
 //* Фильтр в боковом меню "Дополнительные опции". При нажатии на кнопку "Показать еще" в этом боковом меню появляются еще 3 доп. опции. Название кнопки изменяется на "Скрыть"
