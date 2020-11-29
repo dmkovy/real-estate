@@ -5,6 +5,6 @@
 <p>Реализовано с использованием HTML, CSS и JS(native).</p>
 <hr/>
 
-<h4>Overview</h4>
+<h3>Overview</h3>
 
 <img src="overview_real-estate.jpg" />
