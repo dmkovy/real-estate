@@ -6,7 +6,6 @@ const cardShowMoreBtn = document.querySelector('.btn-more'),
 	locationBtns = document.querySelectorAll('.location__btn'),
 	widgetShowMoreBtn = document.querySelector('.widget__show-more'),
 	widgetHidden = document.querySelectorAll('.widget__hidden');
-// valueHidden = document.querySelector('[name = "value-05"]'),
 
 
 //* При нажатии на кнопку "Показать еще" на странице появляются еще 3 карточки. Название кнопки изменяется на "Скрыть"
@@ -35,27 +34,27 @@ widgetTitles.forEach(widget => {
 });
 
 
-//* Фильтр в боковом меню "Близость к метро"
+//* Фильтр в боковом меню "Близость к метро". При нажатии кнопки "Любая" остальные кнопки первого ряда становятся неактивными - и наоборот, при нажатии любой из кнопок первого ряда, когда активна кнопка "Любая" - с неё снимается активный класс (модификатор)
 
-const anyBtn = document.querySelector('#any');
+const oneBtns = document.querySelectorAll('.location__row--one');
+const anyBtn = document.querySelector('.location__row--two');
 
-// function anyLocation() {
-// 	if (anyBtn.classList.contains('location__btn--active')) {
-// 		document.querySelectorAll('#loc_num').forEach(btn => {
-// 			btn.classList.remove('location__btn--active');
-// 		});
-// 	}
-// }
+function anyBtnClick() {
+	if (anyBtn.classList.contains('location__btn--active')) {
+		oneBtns.forEach(btn => {
+			btn.classList.remove('location__btn--active');
+		});
+	}
+}
 
-locationBtns.forEach((btn, index) => {
+locationBtns.forEach(btn => {
 	btn.addEventListener('click', (event) => {
 		event.preventDefault();
 		btn.classList.toggle('location__btn--active');
-		console.log(index);
-		if (anyBtn.classList.contains('location__btn--active')) {
-			document.querySelectorAll('#loc_num').forEach(btn => {
-				btn.classList.remove('location__btn--active');
-			});
+		if (event.target.classList.contains('location__row--one')) {
+			anyBtn.classList.remove('location__btn--active');
+		} else {
+			anyBtnClick();
 		}
 	});
 });
