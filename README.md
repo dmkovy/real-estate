@@ -2,7 +2,7 @@
 
 ### Верстка по макету из Figma: страница сайта недвижимости с карточками объектов (жилые комплексы) и фильтрами выбора.
 > Реализовано с использованием HTML, CSS и JS(native).
-> Ссылка: https://dmkovy.github.io/real-estate/
+ - Ссылка: https://dmkovy.github.io/real-estate/
 <hr/>
 
 ### Overview
